@@ -3,22 +3,31 @@
   <head>
     <title>Bootcampito</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Booticampito">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%
-=begin%>
- <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-<%
-=end%>
-    <%
-=begin%>
- <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-<%
-=end%>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="flex flex-col h-screen justify-between">
+    <div class="bg-gray-700">
+      <div class="max-w-screen-lg mx-auto py-3 px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between flex-wrap">
+          <div class="flex-1 flex items-center">
+            <p class="ml-3 font-medium text-white truncate">
+              <%= link_to "Bootcampito", :root %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-screen-lg mx-auto mb-auto">
+      <%= yield %>
+    </main>
+
+    <footer class="bg-gray-700 text-center text-white py-2 px-3 mt-6 pb-6 h-10"></footer>
   </body>
 </html>
