@@ -8,9 +8,9 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: <%= Rails.application.credentials[:database][:username] %>
-  password: <%= Rails.application.credentials[:database][:password] %>
-  port: <%= Rails.application.credentials[:database][:port] %>
+  username: <%= ENV["PGUSER"] || Rails.application.credentials[:database][:username] %>
+  password: <%= ENV["PGPASSWORD"] || Rails.application.credentials[:database][:password] %>
+  port: <%= ENV["PGPORT"] || Rails.application.credentials[:database][:port] %>
 
 development:
   <<: *default
@@ -27,6 +27,6 @@ production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
   database: <%= ENV["PGDATABASE"] %>
-  username: <%= ENV["PGUSER"] %>
-  password: <%= ENV["PGPASSWORD"] %>
-  port: <%= ENV["PGPORT"] %>
+  # username: <%= ENV["PGUSER"] %>
+  # password: <%= ENV["PGPASSWORD"] %>
+  # port: <%= ENV["PGPORT"] %>
