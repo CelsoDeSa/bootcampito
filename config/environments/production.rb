@@ -4,7 +4,8 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
   config.hosts = [
     "bootcampito.com",
-    "www.bootcampito.com"
+    "www.bootcampito.com",
+    "bootcampito-production.up.railway.app",
   ]
 
   # Code is not reloaded between requests.

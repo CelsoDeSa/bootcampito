@@ -11,7 +11,8 @@ Rails.application.configure do
   config.hosts = [
     "localhost",
     "bootcampito.com",
-    "www.bootcampito.com"
+    "www.bootcampito.com",
+    "bootcampito-production.up.railway.app",
   ]
 
   # Do not eager load code on boot.
