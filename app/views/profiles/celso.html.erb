@@ -1,14 +1,30 @@
 <div>
-  <h1>Celso de Sá</h1>
+  <div>
+    <h1>Celso de Sá</h1>
+  </div>
 
-  <ul>
-    <li>36 anos</li>
-    <li>Gaúcho</li>
-    <li>Ama muito aprender</li>
-    <li>
-      <a href="https://github.com/CelsoDeSa" target="_blank">
-        GitHub
-      </a>
-    </li>
-  </ul>
+  <div>
+    <%= image_tag("celso_avatar") %>
+  </div>
+
+  <div>
+    <ul>
+      <li>36 anos</li>
+      <li>Gaúcho</li>
+      <li>Ama muito aprender</li>
+      <li>
+        <%= link_to "GitHub", "https://github.com/CelsoDeSa", target: "_blank" %>
+      </li>
+    </ul>
+  </div>
+
+  <br />
+
+  <div>
+    <h2>Bio</h2>
+    <p>
+      Sou gaúcho e vegetariano, por isso carne, porque a vaca come o pasto e eu como a vaca.
+    </p>
+  </div>
+
 </div>
