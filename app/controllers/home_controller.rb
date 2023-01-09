@@ -4,10 +4,11 @@ class HomeController < ApplicationController
   end
 
   def aulas
+  end
 
+  def grade
   end
 
   def clases
-
   end
 end
