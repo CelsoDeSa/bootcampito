@@ -9,6 +9,7 @@ Rails.application.configure do
   config.cache_classes = false
 
   config.hosts = [
+    "127.0.0.1",
     "localhost",
     "bootcampito.com",
     "www.bootcampito.com",
