@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :lessons
   get 'profiles/celso'
 
   get 'pt/aulas',         to: "locales/pt#aulas"
