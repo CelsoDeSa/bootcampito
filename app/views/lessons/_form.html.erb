@@ -1,3 +1,5 @@
+<br>
+
 <%= form_with(model: lesson) do |form| %>
   <% if lesson.errors.any? %>
     <div style="color: red">
@@ -13,35 +15,47 @@
 
   <div>
     <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "border-2 border-gray-700 rounded" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :link, style: "display: block" %>
-    <%= form.text_field :link %>
+    <%= form.text_field :link, class: "border-2 border-gray-700 rounded" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :date, style: "display: block" %>
-    <%= form.date_field :date %>
+    <%= form.date_field :date, value: Date.current.strftime("%d-%m-%Y"), class: "border-2 border-gray-700 rounded" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :language, style: "display: block" %>
-    <%= form.text_field :language %>
+    <%= form.text_field :language, class: "border-2 border-gray-700 rounded" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :kind, style: "display: block" %>
-    <%= form.text_field :kind %>
+    <%= form.text_field :kind, class: "border-2 border-gray-700 rounded" %>
   </div>
+
+  <br>
 
   <div>
     <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "border-2 border-gray-700 rounded" %>
   </div>
 
-  <div>
+  <br>
+
+  <div class="text-blue-600">
     <%= form.submit %>
   </div>
 <% end %>

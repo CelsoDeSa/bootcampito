@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :lessons
   get 'profiles/celso'
 
-  get 'pt/aulas',         to: "locales/pt#aulas"
-  get 'pt/aulas/rails',   to: 'locales/pt#rails'
+  get 'pt/aulas',         to: 'locales/pt#aulas'
+  get 'pt/aulas/rails',   to: 'lessons#rails', as: 'pt/aulas/rails'
   get 'pt/aulas/ruby',    to: 'locales/pt#ruby'
 
   get 'es/clases',        to: 'locales/es#clases'

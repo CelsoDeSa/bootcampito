@@ -3,7 +3,11 @@ class LessonsController < ApplicationController
 
   # GET /lessons or /lessons.json
   def index
-    @lessons = Lesson.all
+    @lessons = Lesson.all.order(date: :asc)
+  end
+
+  def rails
+    @lessons = Lesson.all.where(language: "pt", kind: "Rails").order(date: :asc)
   end
 
   # GET /lessons/1 or /lessons/1.json
