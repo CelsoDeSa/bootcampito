@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'projects/conversation_starter', to: 'conversation_starters#load', as: 'projects/conversation_starter'
+
   resources :lessons
   get 'profiles/celso'
 

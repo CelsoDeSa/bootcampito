@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+ConversationStarter.create([
+  { teaser: "...3 meter long snake case..."},
+  { teaser: "He said: 'sorry to poop your...'" }
+])
