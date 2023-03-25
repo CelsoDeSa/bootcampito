@@ -1,0 +1,18 @@
+<br>
+
+<p style="color: green"><%= notice %></p>
+
+<h1 class="text-xl">Ruby en Español</h1>
+
+<br>
+
+<div id="lessons">
+  <% @lessons.each do |lesson| %>
+    <%= render lesson %>
+    <p class="text-blue-600">
+      <%# link_to "Show this lesson", lesson %>
+    </p>
+  <% end %>
+</div>
+
+<%# link_to "New lesson", new_lesson_path,  class: "text-blue-600" %>

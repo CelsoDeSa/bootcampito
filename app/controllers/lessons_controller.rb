@@ -10,6 +10,10 @@ class LessonsController < ApplicationController
     @lessons = Lesson.all.where(language: "pt", kind: "Rails").order(date: :asc)
   end
 
+  def ruby
+    @lessons = Lesson.all.where(language: "es", kind: "Ruby").order(date: :asc)
+  end
+
   # GET /lessons/1 or /lessons/1.json
   def show
   end

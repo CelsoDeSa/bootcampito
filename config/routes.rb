@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'pt/aulas/ruby',    to: 'locales/pt#ruby'
 
   get 'es/clases',        to: 'locales/es#clases'
+  get 'es/clases/ruby',   to: 'lessons#ruby', as: 'es/clases/ruby'
 
   root "home#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
